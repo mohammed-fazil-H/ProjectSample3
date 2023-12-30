@@ -1,0 +1,47 @@
+<app-usernavbar></app-usernavbar>
+<html>
+
+<head>
+  <link rel="stylesheet" href="plans.component.css" />
+  <!-- <link rel="stylesheet" href="../fontawesome/css/all.css" /> -->
+</head>
+
+<body>
+  <div>
+    <input type="text" [(ngModel)]="searchKey" name="searchKey" class="box" placeholder="Search Plans">
+    <button (click)="Search()"  id="submit"  value="Search">Search</button>
+    <!-- <select id="subscription-type" name="subscription-type" (click)="Search()" [(ngModel)]="searchKey" name="SearchKey" aria-placeholder="Category">
+      <option value="TalkTime">TalkTime</option>
+      <option value="Unlimited Data">Unlimited Data</option>
+      <option value="Unlimited calls">Unlimited Calls</option>
+      <option value="OTTPack">OTT Pack</option>
+      <option value="DataPack">Data Pack</option>
+  </select>
+   -->
+  </div>
+  <div  class="container-1" >
+    <div class="row">
+      <div class="card" *ngFor = "let plan of plans">
+        <h2>{{plan.planName}}</h2>
+        <div class="card-detail">
+          <h3>{{plan.planPrice}}/<span>&nbsp;Monthly</span></h3>
+          <p>Speed-X Stream Membership</p>
+          <a href="#">Valid till {{plan.planValidity}} days</a>
+          <ul>
+            <!-- <li>
+              <i class="fa fa-check"></i>&nbsp;&nbsp; Planning and publishing
+              tools
+            </li> -->
+            <!-- <li><i class="fa fa-check"></i>&nbsp;&nbsp;{{plan.planDescription}}</li>
+            <li><i class="fa fa-check"></i>&nbsp;&nbsp;Engagment tools</li> -->
+            <li>
+              <i class="fa fa-check"></i>&nbsp; &nbsp; {{plan.planDescription}}
+            </li>
+          </ul>
+          <a (click)="buy(plan.planPrice,plan.planValidity)">Buy</a>
+        </div>
+      </div>
+    </div>
+    </div>
+    </body>
+     

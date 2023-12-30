@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="my-profile.component.css" rel="stylesheet">
+</head>
+<body>
+	<div class="round-1"></div>
+	<div class="round-2"></div>
+	<div class="wrapper">
+		<div class="box">
+			<div class="profile-img"><img alt="" src="https://th.bing.com/th/id/OIP.kQb9khtxOxwErol-KhGysgHaHs?pid=ImgDet&rs=1"></div>
+			<h2>{{recievedData.firstName}}  {{recievedData.lastName}} <span><div>
+				<p>{{recievedData.emailId}}</p>
+			  </div></span></h2>
+			<p> Speed-X User<br>
+			{{recievedData.plan}} Pack ends in {{recievedData.planValidity}} days</p>
+			
+			<p class="btn-area"><a href="#"> Status: </a> <a class="ex" href="#">{{recievedData.planStatus}}</a></p>
+			
+			<div class="socials">
+				<div class="a1">
+					<i class="fa fa-facebook"></i>
+				</div>
+				<div class="a2">
+					<i class="fa fa-twitter"></i>
+				</div>
+				<div class="a3">
+					<i class="fa fa-pinterest"></i>
+				</div>
+				<div class="a4">
+					<i class="fa fa-google-plus"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+

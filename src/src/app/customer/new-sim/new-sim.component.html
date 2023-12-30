@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="new-sim.component.css">
+</head>
+<body>
+    <div class="wrapper" style="background-image: url('https://akm-img-a-in.tosshub.com/indiatoday/images/story/202210/Image-original--sixteen_nine_0.jpg?VersionId=dtabH0tLIdh.iQg0Afisw.YCN5_4GmCg');">
+        <div class="inner">
+            <div class="image-holder">
+                <img src="https://pbs.twimg.com/media/DmyrmB0XgAACgQK.jpg" alt="image">
+            </div>
+            <form (ngSubmit)="onSubmit()" #newSimForm="ngForm">
+                <h3>Register for New SIM</h3>
+                <div class="form-group">
+                    <input type="text" value="" placeholder="First Name" class="form-control" [(ngModel)]="user.firstName" name="firstName" required>
+                    <input type="text" value="" placeholder="Last Name" class="form-control" [(ngModel)]="user.lastName" name="lastName" required>
+                </div>
+                <div class="form-wrapper">
+                    <input type="text" value="" placeholder="DOB" class="form-control" [(ngModel)]="user.dob" name="dob" required>
+                </div>
+                <div class="form-wrapper">
+                    <input [(ngModel)]="user.emailId" name="email" type="text" placeholder="Email Address" class="form-control" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                </div>
+                <div class="form-wrapper">
+                    <select name="" id="" class="form-control" [(ngModel)]="user.gender" name="gender" required>
+                        <option value="" disabled selected>Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-wrapper">
+                    <input type="text" value="" placeholder="Enter the Address" class="form-control" required>
+                </div>
+                <button type="submit">Request New Sim</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

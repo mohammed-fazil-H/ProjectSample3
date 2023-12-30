@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login-page.component.css">
+
+</head>
+
+<body >
+    <form action="" class="form">
+        <h1>LOGIN</h1>
+        <input type="text" [(ngModel)]="phoneNumber" name="phoneNumber" class="box" placeholder="Enter the Phone Number" required pattern="[0-9]{10}">
+        <input type="text" name="email" class="box" placeholder="Enter the Email">
+        <!-- <a><input type="submit" id="submit"  value="Generate OTP" ></a> -->
+        <button (click)="generateOtp()"  id="submit"  value="Generate OTP" >Generate OTP</button>
+    </form> 
+   
+</body>
+
+
+
+
